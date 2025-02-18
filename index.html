@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Din Barbershop</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        window.addEventListener('scroll', function() {
+            var header = document.querySelector('header');
+            var navLinks = document.querySelectorAll('.nav-menu a');
+            if (window.scrollY > 50) {
+                header.style.backgroundColor = 'white';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+                navLinks.forEach(link => link.style.color = 'black');
+            } else {
+                header.style.backgroundColor = 'transparent';
+                header.style.boxShadow = 'none';
+                navLinks.forEach(link => link.style.color = 'white');
+            }
+        });
+    </script>
+</head>
+<body>
+    <header style="position: fixed; width: 100%; top: 0; left: 0; transition: background-color 0.3s ease-in-out;">
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#hjem">Hjem</a></li>
+                <li><a href="galleri.html">Galleri</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hjem" class="hero">
+        <h1>Velkommen til Din Barbershop</h1>
+        <p>Opplev profesjonell hårklipp og barbering i en avslappende atmosfære.</p>
+        <a href="#kontakt" class="btn">BOOK TIME</a>
+    </section>
+
+    <section id="tjenester">
+        <h2>Våre Tjenester</h2>
+        <ul>
+            <li>Hårklipp</li>
+            <li>Barbering</li>
+            <li>Skjeggtrim</li>
+            <li>Ansiktsbehandling</li>
+        </ul>
+    </section>
+
+    <section id="kontakt" class="contact-container">
+        <div class="contact-form">
+            <h2>Kontakt Oss</h2>
+            <form id="kontaktskjema">
+                <label for="navn">Navn:</label>
+                <input type="text" id="navn" name="navn" required>
+
+                <label for="epost">E-post:</label>
+                <input type="email" id="epost" name="epost" required>
+
+                <label for="melding">Melding:</label>
+                <textarea id="melding" name="melding" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <div class="contact-map">
+            <h2>Besøk Oss</h2>
+            <p>Du finner oss på Ryygestorecenter</p>
+            <iframe src="https://www.google.com/maps?q=Ryygestorecenter&output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Din Barbershop. Alle rettigheter reservert.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
