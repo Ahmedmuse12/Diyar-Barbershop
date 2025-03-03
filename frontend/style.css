@@ -21,6 +21,12 @@ header {
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
+#bookingMessage {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
 .btn {
     display: inline-block;
     margin: 10px;
